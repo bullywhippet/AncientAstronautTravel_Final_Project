@@ -22,3 +22,6 @@
 /.idea/*
 
 .byebug_history
+
+# Ignore image uploads for now
+/public/uploads/*
