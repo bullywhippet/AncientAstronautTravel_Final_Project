@@ -12,4 +12,5 @@ ActiveAdmin.register Tour do
 #   permitted
 # end
 
+  permit_params :name, :description, :price, :imagem, :on_sale, :new, :category_id
 end
