@@ -1,2 +1,26 @@
 <h1>Tours</h1>
-<p></p>
+<p>
+  <strong>Name:</strong>
+  <%= @tour.name %>
+</p>
+<p>
+  <%= image_tag @tour.image, alt: 'Tour Image' %>
+</p>
+<p>
+  <strong>Price:</strong>
+  <%= @tour.price %>
+  <% if @tour.new %>
+    <strong>New!</strong>
+  <% end %>
+  <% if @tour.on_sale %>
+    <strong>On Sale!</strong>
+  <% end %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= raw(@tour.description) %>
+</p>
+<p>
+  <strong>Category:</strong>
+  <%= @tour.category.name %>
+</p>
