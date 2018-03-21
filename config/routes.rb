@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
+  # get 'pages/about'
+  #
+  # get 'pages/contact'
+
   resources :tours, only: %i[index show]
 
   root to: 'tours#index'
+
+  get 'pages/contact', to: 'pages#contact', as: 'contact'
+  get 'contact', to: 'pages#contact'
+
+  get 'pages/about', to: 'pages#about', as: 'about'
+  get 'about', to: 'pages#about'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
