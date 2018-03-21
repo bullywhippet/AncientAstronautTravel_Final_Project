@@ -37,6 +37,8 @@ gem 'devise'
 gem 'carrierwave'
 # reset pks because I broke seeds the first time
 gem 'activerecord-reset-pk-sequence'
+# pagination
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
