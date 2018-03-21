@@ -1,6 +1,6 @@
 class ToursController < ApplicationController
   def index
-    @tours = Tour.order(:name).per(10)
+    @tours = Tour.page(params[:page]).per(3)
   end
 
   def show

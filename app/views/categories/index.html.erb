@@ -1,0 +1,10 @@
+<h1>Categories</h1>
+<table>
+  <tbody>
+  <% @categories.each do |cat| %>
+    <tr>
+      <td><%= link_to cat.name, cat %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
