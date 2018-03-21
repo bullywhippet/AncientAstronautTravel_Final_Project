@@ -1,7 +1,7 @@
 <h1>Tours</h1>
 
 <% @tours.each do |tour| %>
-  <h2><%= tour.name %></h2>
+  <h2><%= link_to tour.name, tour %></h2>
   <p>
     <%= image_tag tour.image, alt: 'Tour Image' %>
   </p>
