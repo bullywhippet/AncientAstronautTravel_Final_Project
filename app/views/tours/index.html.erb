@@ -1,0 +1,19 @@
+<h1>Tours</h1>
+
+<% @tours.each do |tour| %>
+  <h2><%= tour.name %></h2>
+  <p>
+    <%= image_tag tour.image, alt: 'Tour Image' %>
+  </p>
+  <p>
+    <strong>Price:</strong>
+    <%= tour.price %>
+    <% if tour.new == true %>
+      <strong>New!</strong>
+    <% end %>
+  </p>
+  <p>
+    <strong>Description:</strong>
+    <%= tour.description %>
+  </p>
+<% end %>
