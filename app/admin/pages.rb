@@ -13,6 +13,4 @@ ActiveAdmin.register Page do
 # end
   actions :all, except: [:destroy]
   permit_params :title, :content, :image
-  
-
 end

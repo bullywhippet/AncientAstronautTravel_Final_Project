@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'activeadmin'
 gem 'devise'
 gem 'carrierwave'
+# reset pks because I broke seeds the first time
+gem 'activerecord-reset-pk-sequence'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
