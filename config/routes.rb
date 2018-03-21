@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  # get 'category/index'
-  #
-  # get 'category/show'
-
-  # get 'pages/about'
-  #
-  # get 'pages/contact'
-
   resources :tours, only: %i[index show]
   resources :categories, only: %i[index show]
 
