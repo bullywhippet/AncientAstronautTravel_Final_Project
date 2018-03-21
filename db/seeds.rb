@@ -35,7 +35,7 @@ Tour.create(name: 'Viracocha Adventure',
                           <br/><br/>
                           Duration: may last as long as you like,
                            or for eternity.',
-            price: 34_400.42,
+            price: 42_400.42,
             image: File.open("#{Rails.root}/public/uploads/tour/image/viracocha.png"),
             category: Category.find_by(name: 'Adventure'))
 
@@ -91,67 +91,70 @@ Tour.create(name: 'Gobekli Tepe For Two',
             image: File.open("#{Rails.root}/public/uploads/tour/image/gobekli.png"),
             category: Category.find_by(name: 'Romantic'))
 
-# # 6
-# Tour.create(name: 'Tiahuanaco For Two',
-#             description: 'Tiahuanaco to Titan. A Magical adventure for two
-#                           starting in Tiahuanaco and visiting the moon of Saturn.
-#                           <br/><br/>
-#                           This is a beautiful opportunity to show the one you
-#                            love that you care about history and space.
-#                           <br/><br/>
-#                           Trip takes about a month.',
-#             price: 1500.00,
-#             image: File.open("#{Rails.root}/public/uploads/tour/image/tiahuanaco.png"),
-#             category: Category.find_by(name: 'Romantic'))
-#
+# 6
+Tour.create(name: 'Akashic Records Retreat',
+            description: "The hall of Akashic records doesn't actually require
+                           long distance travel. This tour package teaches you
+                           the art of astral projection to access the hall.
+                          <br/><br/>
+                          This is a good tour for 1.
+                          <br/><br/>
+                          Duration: 3 days",
+            price: 300.42,
+            image: File.open("#{Rails.root}/public/uploads/tour/image/akashic.jpg"),
+            category: Category.find_by(name: 'Good for Solo travel'))
+
 # # 7
-# Tour.create(name: 'Tiahuanaco For Two',
-#             description: 'Tiahuanaco to Titan. A Magical adventure for two
-#                           starting in Tiahuanaco and visiting the moon of Saturn.
-#                           <br/><br/>
-#                           This is a beautiful opportunity to show the one you
-#                            love that you care about history and space.
-#                           <br/><br/>
-#                           Trip takes about a month.',
-#             price: 1500.00,
-#             image: File.open("#{Rails.root}/public/uploads/tour/image/tiahuanaco.png"),
-#             category: Category.find_by(name: 'Romantic'))
-#
+Tour.create(name: 'Vimana Venture',
+            description: 'Be whisked away in he flying palace of yester-year
+                          <br/><br/>
+                          Take your friends on the trip of a life time with
+                           stunning views inside and out your transportation
+                           vessel.
+                          <br/><br/>
+                          Duration: 4 months',
+            price: 42_500.42,
+            image: File.open("#{Rails.root}/public/uploads/tour/image/vimana.jpg"),
+            category: Category.find_by(name: 'Good for Group travel'))
+
 # # 8
-# Tour.create(name: 'Tiahuanaco For Two',
-#             description: 'Tiahuanaco to Titan. A Magical adventure for two
-#                           starting in Tiahuanaco and visiting the moon of Saturn.
-#                           <br/><br/>
-#                           This is a beautiful opportunity to show the one you
-#                            love that you care about history and space.
-#                           <br/><br/>
-#                           Trip takes about a month.',
-#             price: 1500.00,
-#             image: File.open("#{Rails.root}/public/uploads/tour/image/tiahuanaco.png"),
-#             category: Category.find_by(name: 'Romantic'))
-#
+Tour.create(name: 'Puerta de Hayu Marca',
+            description: "The Gate of the Gods is your portal to ..
+                           well we're not too sure. There is no insurance
+                            provided for this tour, nor is there a guide.
+                          <br/><br/>
+                          We're not to sure if you will actually return
+                           from this adventure or where it goes.
+                          <br/><br/>
+                          Duration: ???.",
+            price: 4242.42,
+            image: File.open("#{Rails.root}/public/uploads/tour/image/lapuerta.png"),
+            category: Category.find_by(name: 'Adventure'))
+
 # # 9
-# Tour.create(name: 'Tiahuanaco For Two',
-#             description: 'Tiahuanaco to Titan. A Magical adventure for two
-#                           starting in Tiahuanaco and visiting the moon of Saturn.
-#                           <br/><br/>
-#                           This is a beautiful opportunity to show the one you
-#                            love that you care about history and space.
-#                           <br/><br/>
-#                           Trip takes about a month.',
-#             price: 1500.00,
-#             image: File.open("#{Rails.root}/public/uploads/tour/image/tiahuanaco.png"),
-#             category: Category.find_by(name: 'Romantic'))
-#
+Tour.create(name: 'Derinkuyu Destination',
+            description: 'Venture into the earth for a look at the way
+                           the Ancient Astronauts lived at one time.
+                          <br/><br/>
+                          Take a group with you. You never know where
+                           you may end up.
+                          <br/><br/>
+                          Duration: 3 Weeks',
+            price: 1542.42,
+            image: File.open("#{Rails.root}/public/uploads/tour/image/derinkuyu.png"),
+            category: Category.find_by(name: 'Good for Group travel'))
+
 # # 10
-# Tour.create(name: 'Tiahuanaco For Two',
-#             description: 'Tiahuanaco to Titan. A Magical adventure for two
-#                           starting in Tiahuanaco and visiting the moon of Saturn.
-#                           <br/><br/>
-#                           This is a beautiful opportunity to show the one you
-#                            love that you care about history and space.
-#                           <br/><br/>
-#                           Trip takes about a month.',
-#             price: 1500.00,
-#             image: File.open("#{Rails.root}/public/uploads/tour/image/tiahuanaco.png"),
-#             category: Category.find_by(name: 'Romantic'))
+Tour.create(name: 'Teotihuacan Tour',
+            description: 'Teotihuacan advanced construction techniques brought to
+                           us by the Foamasi. Visit their earthly realm and
+                           then visit their home planet
+                          <br/><br/>
+                          You should probably travel alone or in pairs,
+                           as the Formasi are not fond of
+                           large groups of people
+                          <br/><br/>
+                          Duration: takes about a month.',
+            price: 21_500.42,
+            image: File.open("#{Rails.root}/public/uploads/tour/image/formasi.png"),
+            category: Category.find_by(name: 'Good for Solo travel'))
