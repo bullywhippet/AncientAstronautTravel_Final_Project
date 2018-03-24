@@ -1,4 +1,4 @@
-class CategoriesController < ApplicationController
+class CategoriesController < ApplicationController # :nodoc:
   def index
     @categories = Category.all
   end

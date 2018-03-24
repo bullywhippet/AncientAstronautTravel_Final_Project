@@ -1,4 +1,4 @@
-class ToursController < ApplicationController
+class ToursController < ApplicationController # :nodoc:
   def index
     @tours = Tour.page(params[:page]).per(3)
   end
