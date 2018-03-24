@@ -1,14 +1,23 @@
-<h1>Categories</h1>
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
-<% unless @category.tours.blank? %>
-  <p>
-    <strong>Tours Of this category:</strong>
+<div id="about" class="container-fluid">
+  <div class="row">
+    <h1>Categories</h1>
+    <div class="col-sm-8">
+      <div class="card-header">
+        <strong>Category Name:</strong>
+        <%= @category.name %>
+      </div>
+      <% unless @category.tours.blank? %>
+        <p>
+          <strong>Tours Of this category:</strong>
 
-    <%  @category.tours.each do |tour| %>
-      <%= link_to tour.name, tour %> |
-    <% end %>
-  </p>
-<% end %>
+          <%  @category.tours.each do |tour| %>
+            <%= link_to tour.name, tour %> |
+        <% end %>
+        </p>
+      <% end %>
+
+
+    </div>
+  </div>
+</div>
+<!--<div class="container"><%= render partial: 'tours/tour', collection: @tours %></div>-->

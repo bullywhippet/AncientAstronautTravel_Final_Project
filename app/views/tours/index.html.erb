@@ -1,29 +1,6 @@
-<h1>Tours</h1>
-<%= link_to 'Categories', categories_path %>
+<div class="container">
 
-<% @tours.each do |tour| %>
-  <h2><%= link_to tour.name, tour %></h2>
-  <p>
-    <%= image_tag tour.image, alt: 'Tour Image' %>
-  </p>
-  <p>
-    <strong>Price:</strong>
-    <%= tour.price %>
-    <% if tour.new == true %>
-      <strong>New!</strong>
-    <% end %>
-  </p>
-  <p>
-    <strong>Description:</strong>
-    <%= raw(tour.description) %>
-  </p>
-  <p>
-    <strong>Category:</strong>
-    <%= tour.category.name %>
-  </p>
-<% end %>
+  <%= render partial: 'tour', collection: @tours %>
+  <%= paginate @tours %>
 
-
-<%= paginate @tours %>
-
-<%= page_entries_info @tours %>
+</div>

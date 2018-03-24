@@ -39,6 +39,10 @@ gem 'carrierwave'
 gem 'activerecord-reset-pk-sequence'
 # pagination
 gem 'kaminari'
+# bootstrap
+gem 'bootstrap-sass'
+# gem 'autoprefixer-rails'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
