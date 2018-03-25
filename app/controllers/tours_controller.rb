@@ -6,4 +6,12 @@ class ToursController < ApplicationController # :nodoc:
   def show
     @tour = Tour.find(params[:id])
   end
+
+  def sale
+    @tours = Tour.where(on_sale: true)
+  end
+
+  def new
+    @tours = Tour.where(new: true)
+  end
 end
