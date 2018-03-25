@@ -1,0 +1,24 @@
+<div class="col-sm-4 left">
+  <%= image_tag tour.image, alt: 'Tour Image' %>
+  <p>
+    <strong><%= link_to tour.name, tour %></strong>
+  </p>
+  <p>
+    <strong>Price:</strong>
+    $<%= tour.price %>
+    <% if tour.new %>
+      <strong>New!</strong>
+    <% end %>
+    <% if tour.on_sale %>
+      <strong>On Sale!</strong>
+    <% end %>
+  </p>
+  <p>
+    <strong>Description:</strong>
+    <%= raw(tour.description) %>
+  </p>
+  <p>
+    <strong>Category:</strong>
+    <%= tour.category.name %>
+  </p>
+</div>

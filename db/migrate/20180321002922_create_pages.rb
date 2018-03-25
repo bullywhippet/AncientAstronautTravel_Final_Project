@@ -1,4 +1,4 @@
-class CreatePages < ActiveRecord::Migration[5.1]
+class CreatePages < ActiveRecord::Migration[5.1] # :nodoc:
   def change
     create_table :pages do |t|
       t.string :title

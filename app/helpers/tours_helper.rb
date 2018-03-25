@@ -1,2 +1,2 @@
-module ToursHelper
+module ToursHelper # :nodoc:
 end

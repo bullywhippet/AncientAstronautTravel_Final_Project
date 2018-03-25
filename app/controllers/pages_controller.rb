@@ -1,4 +1,4 @@
-class PagesController < ApplicationController
+class PagesController < ApplicationController # :nodoc:
   def about
     @page = Page.find_by_title('About')
   end

@@ -4,19 +4,19 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Ancient Astronaut Tours"
+  config.site_title = 'Ancient Astronaut Tours'
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
-  # config.site_title_link = "/"
+  # config.site_title_link = '/'
 
   # Set an optional image to be displayed for the header
   # instead of a string (overrides :site_title)
   #
   # Note: Aim for an image that's 21px high so it fits in the header.
   #
-  # config.site_title_image = "logo.png"
+  # config.site_title_image = 'logo.png'
 
   # == Default Namespace
   #
@@ -40,11 +40,11 @@ ActiveAdmin.setup do |config|
   # within a namespace:
   #
   #   config.namespace :admin do |admin|
-  #     admin.site_title = "Custom Admin Title"
+  #     admin.site_title = 'Custom Admin Title'
   #   end
   #
   # This will ONLY change the title for the admin section. Other
-  # namespaces will continue to use the main "site_title" configuration.
+  # namespaces will continue to use the main 'site_title' configuration.
 
   # == User Authentication
   #
@@ -67,10 +67,10 @@ ActiveAdmin.setup do |config|
   # In case you prefer Pundit over other solutions you can here pass
   # the name of default policy class. This policy will be used in every
   # case when Pundit is unable to find suitable policy.
-  # config.pundit_default_policy = "MyDefaultPunditPolicy"
+  # config.pundit_default_policy = 'MyDefaultPunditPolicy'
 
   # You can customize your CanCan Ability class name here.
-  # config.cancan_ability_class = "Ability"
+  # config.cancan_ability_class = 'Ability'
 
   # You can specify a method to be called on unauthorized access.
   # This is necessary in order to prevent a redirect loop which happens
@@ -116,7 +116,8 @@ ActiveAdmin.setup do |config|
 
   # == Admin Comments
   #
-  # This allows your users to comment on any resource registered with Active Admin.
+  # This allows your users to comment on any resource
+  # registered with Active Admin.
   #
   # You can completely disable comments:
   # config.comments = false
@@ -181,7 +182,8 @@ ActiveAdmin.setup do |config|
 
   # == Create Another Checkbox
   #
-  # Create another checkbox is disabled by default. You can customize it for individual
+  # Create another checkbox is disabled by default. You can
+  # customize it for individual
   # resources or you can enable them globally from here.
   #
   # config.create_another = true
@@ -195,7 +197,8 @@ ActiveAdmin.setup do |config|
   # To load a stylesheet:
   #   config.register_stylesheet 'my_stylesheet.css'
   #
-  # You can provide an options hash for more control, which is passed along to stylesheet_link_tag():
+  # You can provide an options hash for more control,
+  # which is passed along to stylesheet_link_tag():
   #   config.register_stylesheet 'my_print_stylesheet.css', media: :print
   #
   # To load a javascript file:
@@ -211,13 +214,16 @@ ActiveAdmin.setup do |config|
 
   # == Menu System
   #
-  # You can add a navigation menu to be used in your application, or configure a provided menu
+  # You can add a navigation menu to be used in your application,
+  # or configure a provided menu
   #
-  # To change the default utility navigation to show a link to your website & a logout btn
+  # To change the default utility navigation to show a link to
+  # your website & a logout btn
   #
   #   config.namespace :admin do |admin|
   #     admin.build_menu :utility_navigation do |menu|
-  #       menu.add label: "My Great Website", url: "http://www.mygreatwebsite.com", html_options: { target: :blank }
+  #       menu.add label: 'My Great Website',
+  #       url: 'http://www.mygreatwebsite.com', html_options: { target: :blank }
   #       admin.add_logout_button_to_menu menu
   #     end
   #   end
@@ -226,7 +232,8 @@ ActiveAdmin.setup do |config|
   #
   #   config.namespace :admin do |admin|
   #     admin.build_menu :default do |menu|
-  #       menu.add label: "My Great Website", url: "http://www.mygreatwebsite.com", html_options: { target: :blank }
+  #       menu.add label: 'My Great Website',
+  #       url: 'http://www.mygreatwebsite.com', html_options: { target: :blank }
   #     end
   #   end
 
@@ -264,7 +271,7 @@ ActiveAdmin.setup do |config|
 
   # == Filters
   #
-  # By default the index screen includes a "Filters" sidebar on the right
+  # By default the index screen includes a 'Filters' sidebar on the right
   # hand side with a filter for each attribute of the registered model.
   # You can enable or disable them for all resources here.
   #
