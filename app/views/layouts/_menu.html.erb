@@ -15,8 +15,17 @@
         <li><%= link_to 'Categories', categories_path %></li>
         <li><%= link_to 'Contact', contact_path %></li>
         <li><%= link_to 'About', about_path %></li>
+
       </ul>
+
       <ul class="nav navbar-nav navbar-right">
+        <li>
+          <%= form_tag("/search", method: "get") do %>
+            <%= label_tag(:q, "Search for:") %>
+            <%= text_field_tag(:q) %>
+            <%= submit_tag("Search")  %>
+          <% end %>
+        </li>
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
       </ul>

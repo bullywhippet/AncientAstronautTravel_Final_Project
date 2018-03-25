@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+  get 'search/index'
+
   resources :tours, only: %i[index show]
   resources :categories, only: %i[index show]
 
   root to: 'tours#index'
+
+  get 'search', to: 'search#index', as: 'search'
 
   get 'pages/contact', to: 'pages#contact', as: 'contact'
   get 'contact', to: 'pages#contact'
