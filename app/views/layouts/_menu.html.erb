@@ -22,9 +22,9 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
           <%= form_tag("/search", method: "get") do %>
-            <%= label_tag(:q, "Search for:") %>
+            <!--<%= label_tag(:q, "Search for:") %>-->
             <%= text_field_tag(:q) %>
-            <%= submit_tag("Search")  %>
+            <%= submit_tag("Search") %>
           <% end %>
         </li>
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
