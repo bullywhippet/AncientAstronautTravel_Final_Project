@@ -1,6 +1,6 @@
 class ToursController < ApplicationController # :nodoc:
   def index
-    @tours = Tour.page(params[:page]).per(3)
+    @tours = Tour.order(:name).page(params[:page]).per(3)
   end
 
   def show
