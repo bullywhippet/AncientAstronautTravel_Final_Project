@@ -12,15 +12,80 @@ Tour.destroy_all
 Tour.reset_pk_sequence
 Category.destroy_all
 Category.reset_pk_sequence
+Province.destroy_all
+Province.reset_pk_sequence
 
 # AdminUser.create!(email: 'admin@example.com', password: 'password',
 # password_confirmation: 'password') if Rails.env.development?
 
 puts 'Creating data'
+
+# --- create categories
+puts 'Creating Categories'
+
 Category.create(name: 'Good for Solo travel')
 Category.create(name: 'Good for Group travel')
 Category.create(name: 'Adventure')
 Category.create(name: 'Romantic')
+
+# --- create static pages
+puts 'Creating Static Pages'
+
+Page.create(title: 'Contact', content: "Ancient Astronaut Intergalactic Tours
+                                       <br/> 123 Fake St
+                                       <br/> Winnipeg, MB R3C 1Z1
+                                      <br/><br/>
+                                      E-mail: contact-us@aait.com")
+Page.create(title: 'About', content: "Ancient Astronaut Intergalactic Tours has
+                                       been operating for thousands of years,
+                                       but only officially incorporated in 1968.
+                                       <br/>
+                                       We provide a unique experience whereby
+                                        we take you from the locations where the
+                                        ancient astronauts first visited on this
+                                        earth to the places from whence thy came.
+                                        <br/>
+                                       Combining technology similar to SpaceX
+                                       with newly discovered wormhole
+                                       advancements, we guarantee a once in
+                                        a lifetime experience.")
+
+# --- create provinces
+puts 'Creating Provinces'
+
+Province.create(name: 'Alberta',
+                pst_rate: 0, gst_rate: 5, hst_rate: 0)
+Province.create(name: 'British Columbia',
+                pst_rate: 7, gst_rate: 5, hst_rate: 0)
+Province.create(name: 'Manitoba',
+                pst_rate: 8, gst_rate: 5, hst_rate: 0)
+Province.create(name: 'New-Brunswick',
+                pst_rate: 0, gst_rate: 5, hst_rate: 10)
+Province.create(name: 'Newfoundland and Labrador',
+                pst_rate: 0, gst_rate: 0, hst_rate: 15)
+Province.create(name: 'Northwest Territories',
+                pst_rate: 0, gst_rate: 5, hst_rate: 0)
+Province.create(name: 'Nova Scotia',
+                pst_rate: 0, gst_rate: 0, hst_rate: 15)
+Province.create(name: 'Nunavut',
+                pst_rate: 0, gst_rate: 5, hst_rate: 0)
+Province.create(name: 'Ontario',
+                pst_rate: 0, gst_rate: 0, hst_rate: 13)
+Province.create(name: 'Prince Edward Island',
+                pst_rate: 0, gst_rate: 0, hst_rate: 15)
+Province.create(name: 'Quebec',
+                pst_rate: 9.975, gst_rate: 5, hst_rate: 0)
+Province.create(name: 'Saskatchewan',
+                pst_rate: 6, gst_rate: 5, hst_rate: 0)
+Province.create(name: 'Yukon',
+                pst_rate: 0, gst_rate: 5, hst_rate: 0)
+
+
+
+# --- create tours  Note: ensure there are images n the right
+# location or this will not work.
+# ---
+puts 'Creating default set of tours'
 
 tour_path = '/public/uploads/tour/image/'
 # 1
