@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root to: 'tours#index'
 
   get 'search', to: 'search#index', as: 'search'
+
   get 'sale', to: 'tours#sale', as: 'sale'
   get 'new', to: 'tours#new', as: 'new'
 
