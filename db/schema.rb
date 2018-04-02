@@ -74,9 +74,9 @@ ActiveRecord::Schema.define(version: 20180402024415) do
 
   create_table "provinces", force: :cascade do |t|
     t.string "name"
-    t.decimal "pst_rate"
-    t.decimal "gst_rate"
-    t.decimal "hst_rate"
+    t.integer "pst_rate"
+    t.integer "gst_rate"
+    t.integer "hst_rate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
