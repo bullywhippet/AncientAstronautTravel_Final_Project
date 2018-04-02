@@ -22,7 +22,6 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
           <%= form_tag("/search", method: "get") do %>
-            <%= select_tag "category_id", options_from_collection_for_select(Category.all, "id", "name") %>
             <%= text_field_tag(:q) %>
             <%= submit_tag("Search") %>
           <% end %>
