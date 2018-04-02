@@ -1,6 +1,7 @@
-<h1>Tours: <%= @tour.name %></h1>
-
-<%= render partial: 'tours/tour',
-           object: @tour,
-           locals: {show_details_link:false}
-%>
+<div class="container">
+  <h1>Tours: <%= @tour.name %></h1>
+  <%= render partial: 'tours/tour',
+             object: @tour,
+             locals: {show_details_link:false}
+  %>
+</div>
