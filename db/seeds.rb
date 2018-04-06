@@ -14,6 +14,8 @@ Category.destroy_all
 Category.reset_pk_sequence
 Province.destroy_all
 Province.reset_pk_sequence
+Page.destroy_all
+Page.reset_pk_sequence
 
 # AdminUser.create!(email: 'admin@example.com', password: 'password',
 # password_confirmation: 'password') if Rails.env.development?
