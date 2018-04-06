@@ -147,7 +147,7 @@ Tour.create(name: 'Star Child Tour',
                            and loved ones with you.
                           <br/><br/>
                           Duration: 3 lifetimes.',
-            price: 21_500.99,
+            price: 21_500.42,
             image: File.open("#{Rails.root}#{tour_path}starchild.png"),
             category: Category.find_by(name: 'Good for Group travel'))
 
@@ -160,7 +160,7 @@ Tour.create(name: 'Gobekli Tepe For Two',
                            love that you care about history and space.
                           <br/><br/>
                           Duration: 1 week",
-            price: 2990.09,
+            price: 2990.42,
             image: File.open("#{Rails.root}#{tour_path}gobekli.png"),
             category: Category.find_by(name: 'Romantic'))
 
@@ -175,6 +175,7 @@ Tour.create(name: 'Akashic Records Retreat',
                           Duration: 3 days",
             price: 300.42,
             image: File.open("#{Rails.root}#{tour_path}akashic.jpg"),
+            on_sale: true,
             category: Category.find_by(name: 'Good for Solo travel'))
 
 # # 7
@@ -202,6 +203,7 @@ Tour.create(name: 'Puerta de Hayu Marca',
                           Duration: ???.",
             price: 4242.42,
             image: File.open("#{Rails.root}#{tour_path}lapuerta.png"),
+            on_sale: true,
             category: Category.find_by(name: 'Adventure'))
 
 # # 9
@@ -231,4 +233,5 @@ Tour.create(name: 'Teotihuacan Tour',
                           Duration: takes about a month.',
             price: 21_500.42,
             image: File.open("#{Rails.root}#{tour_path}formasi.png"),
+            new: true,
             category: Category.find_by(name: 'Good for Solo travel'))
