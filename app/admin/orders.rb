@@ -12,4 +12,29 @@ ActiveAdmin.register Order do
   #   permitted
   # end
 
+  permit_params :status, :pst_rate, :gst_rate, :hst_rate,
+                :order_date, :sub_total, :total,
+                :customer_id, order_item_attributes:
+                    %i[tour_id order_id price quantity]
+
+  form do |f|
+    f.semantic_errors *f.object.errors.keys
+
+    # need to pull taxes from db
+    f.inputs "Order" do
+      f.input :order_date
+      f.input :customer
+      # f.input :pst_rate
+      # f.input :gst_rate
+      # f.input :hst_rate
+      f.input :status
+      f.input :sub_total
+      f.input :total
+
+      f.has_many :order_items, allow_destroy: true do |o_i|
+        o_i.input :tour
+      end
+    end
+    f.actions
+  end
 end
