@@ -21,18 +21,18 @@ ActiveAdmin.register Order do
     f.semantic_errors *f.object.errors.keys
 
     # need to pull taxes from db
-    f.inputs "Order" do
+    f.inputs 'Order' do
       f.input :order_date
       f.input :customer
-      # f.input :pst_rate
-      # f.input :gst_rate
-      # f.input :hst_rate
+      f.input :pst_rate
+      f.input :gst_rate
+      f.input :hst_rate
       f.input :status
       f.input :sub_total
       f.input :total
 
-      f.has_many :order_items, allow_destroy: true do |o_i|
-        o_i.input :tour
+      f.has_many :order_items, allow_destroy: true do |n_f|
+        n_f.input :tour
       end
     end
     f.actions

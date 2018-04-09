@@ -1,6 +1,8 @@
 <div class="container">
   <h1> Tours : New</h1>
   <p>
-    <%= render partial: 'tours/tour', collection: @tours %>
+    <%= render partial: 'tours/tour',
+               collection: @tours,
+               locals: {add_link:true} %>
   </p>
 </div>

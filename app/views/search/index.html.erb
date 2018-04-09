@@ -19,7 +19,9 @@
   </div>
   <h4>Your search for '<%= @query %>', returned <%= pluralize(@found_items.size, 'result') %></h4>
   <%= render partial: 'tours/tour',
-             collection: @found_items
+             collection: @found_items,
+             locals: {show_details_link:true,
+                      add_link:true}
   %>
 </div>
 

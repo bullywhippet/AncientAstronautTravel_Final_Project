@@ -1,7 +1,7 @@
 class Order < ApplicationRecord
   belongs_to :customer
 
-  has_many :order_items, inverse_of: :order, dependent: :destroy
+  has_many :order_items, dependent: :destroy
   # has_many :order_items, inverse_of: :order
   has_many :tours, through: :order_items
   accepts_nested_attributes_for :order_items, allow_destroy: true

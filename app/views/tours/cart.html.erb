@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="text-center">
+    <h3>Cart</h3><br>
+
+  </div>
+  <% if @tours_in_cart.empty? %>
+    <p class="text-center">There is nothing in the cart</p>
+  <% else %>
+      <h4 class="text-center"><%= link_to 'Checkout', "/cart/checkout"%></h4>
+    <p class="text-center">
+      <%= link_to 'Remove all items from cart', clear_cart_tours_path, method: :post %>
+    </p>
+    <%= render partial: 'tours/tour',
+             collection: @tours_in_cart,
+             locals: {add_link:false} %>
+  <% end %>
+
+
+</div>
