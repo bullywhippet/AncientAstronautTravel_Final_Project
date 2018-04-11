@@ -14,8 +14,8 @@ ActiveAdmin.register Order do
 
   permit_params :status, :pst_rate, :gst_rate, :hst_rate,
                 :order_date, :sub_total, :total,
-                :customer_id, order_item_attributes:
-                    %i[tour_id order_id price quantity]
+                :customer_id, order_items_attributes:
+                    %i[id tour_id order_id price quantity _destroy]
 
   form do |f|
     f.semantic_errors *f.object.errors.keys
