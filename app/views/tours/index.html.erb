@@ -1,4 +1,6 @@
 <div class="container">
-  <%= render partial: 'tour', collection: @tours %>
+  <%= render partial: 'tour', collection: @tours,
+             locals: {show_details_link:true,
+                      add_link:true}%>
   <%= paginate @tours %>
 </div>

@@ -17,8 +17,7 @@ Province.reset_pk_sequence
 Page.destroy_all
 Page.reset_pk_sequence
 
-# AdminUser.create!(email: 'admin@example.com', password: 'password',
-# password_confirmation: 'password') if Rails.env.development?
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
 puts 'Creating data'
 

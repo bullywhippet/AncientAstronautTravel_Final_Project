@@ -1,0 +1,25 @@
+<h2>Order!</h2>
+
+<% @subtotal = 0 %>
+<% @tours_in_cart.each do |tour| %>
+  <p><%= tour.name%> for <%= tour.price %></p>
+  <% @subtotal += tour.price %>
+<% end %>
+
+<strong>Subtotal: </strong><%= @subtotal.round(2) %>
+
+<% @gst = @subtotal * @province.gst_rate %>
+<% @pst = @subtotal * @province.pst_rate %>
+<% @hst = @subtotal * @province.hst_rate %>
+
+<br>
+<strong>Gst: </strong><%= @gst.round(2) %>
+<strong>Pst: </strong><%= @pst.round(2) %>
+<strong>Hst: </strong><%= @hst.round(2) %>
+<% @total = @subtotal + @gst + @pst + @hst%>
+<br>
+<strong>Total: </strong><%= @total.round(2) %>
+<br>
+<%= form_tag('/cart/checkout/complete_order/', method: "get") do %>
+  <%= submit_tag("Complete Order") %>
+<% end %>

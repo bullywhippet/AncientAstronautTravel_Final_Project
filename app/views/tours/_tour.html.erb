@@ -13,6 +13,23 @@
       <strong>On Sale!</strong>
     <% end %>
   </p>
+  <% if add_link %>
+    <p>
+      <%= form_tag tours_path + "/#{tour.id}/add_to_cart", method: :post do %>
+        <%= hidden_field_tag :tour_id, tour.id %>
+        <%= number_field_tag :quantity, 1 %>
+        <%= submit_tag "Add to cart"%>
+      <% end %>
+      <!--<%= link_to 'Add to Cart', tours_path + "/#{tour.id}/add_to_cart", method: :post %>-->
+    </p>
+  <% else %>
+    <p>
+      Quantity: <%= @qty %>
+    </p>
+    <p>
+      <%= link_to 'Remove', tours_path + "/#{tour.id}/remove_from_cart", method: :post %>
+    </p>
+  <% end %>
   <p>
     <strong>Description:</strong>
     <%= raw(tour.description) %>
