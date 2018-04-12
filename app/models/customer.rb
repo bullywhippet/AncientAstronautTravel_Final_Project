@@ -11,6 +11,6 @@ class Customer < ApplicationRecord
   validates :email, uniqueness: true
 
   def name
-    return self.email
+    email
   end
 end
